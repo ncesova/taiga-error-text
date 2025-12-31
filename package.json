@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "module": "index.ts",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ncesova/taiga-error-text.git"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
