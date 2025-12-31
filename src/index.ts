@@ -2,6 +2,7 @@ import { AsyncValidatorFn, ValidatorFn, Validators } from "@angular/forms";
 
 import { ErrorMessage } from "./types";
 import { createValidator } from "./utils";
+import { callbackValidator } from "./validators/callback";
 import { nameValidator } from "./validators/name";
 
 export const min = (min: number, message?: ErrorMessage) =>
@@ -43,3 +44,21 @@ export const composeAsync = (
 
 export const name = (message?: ErrorMessage) =>
   createValidator(nameValidator, message);
+
+/**
+ * Validator that requires the control's value to satisfy a callback function.
+ *
+ * @param condition A function that returns true if the value is invalid.
+ * @param message The error message to return if the validation fails.
+ *
+ * @example
+ * ```ts
+ * const control = new FormControl(10, [
+ *   callback(value => value < 42, 'Value must be at least 42')
+ * ]);
+ * ```
+ */
+export const callback = (
+  condition: (value: any) => boolean,
+  message?: ErrorMessage
+) => createValidator(callbackValidator(condition), message);
