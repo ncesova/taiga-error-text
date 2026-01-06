@@ -54,7 +54,7 @@ export const name = (message?: ErrorMessage) =>
  * @example
  * ```ts
  * const control = new FormControl(10, [
- *   callback(value => value < 42, 'Value must be at least 42')
+ *   t.callback(value => value < 42, 'Value must be at least 42')
  * ]);
  * ```
  */
