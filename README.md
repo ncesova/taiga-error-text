@@ -2,6 +2,20 @@
 
 Простая библеотека для привязки текста ошибки к валидаторам, созданная для работы с [Taiga-UI](https://taiga-ui.dev/)
 
+Включает в себя почти все методы из класса Validator, такие как:
+
+- min
+- max
+- required
+- requiredTrue
+- email
+- minLength
+- maxLength
+- pattern
+- nullValidator
+- compose
+- composeAsync
+
 ## Использование
 
 ### Простой пример

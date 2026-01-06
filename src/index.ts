@@ -42,9 +42,6 @@ export const composeAsync = (
   message?: ErrorMessage
 ) => createValidator(Validators.composeAsync(validators)!, message);
 
-export const name = (message?: ErrorMessage) =>
-  createValidator(nameValidator, message);
-
 /**
  * Validator that requires the control's value to satisfy a callback function.
  *
